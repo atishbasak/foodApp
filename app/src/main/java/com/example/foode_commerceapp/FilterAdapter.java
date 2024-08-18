@@ -61,14 +61,11 @@ public class FilterAdapter extends RecyclerView.Adapter<FilterAdapter.ViewHolder
             public void onClick(View v) {
                 Intent intentId = ((Activity)context).getIntent();
                 boolean ID = intentId.getBooleanExtra(HomeActivity.DISH_NAME,false);
-//                String email_for_payment = intentId.getStringExtra(HomeActivity.EMAIL_FOR_ORDER_HOME);
-//                Toast.makeText(context, ""+ID, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context,SpecificItemPage.class);
                 intent.putExtra(PARSE_IMG,listFilter.get(position).getcardIMG());
                 intent.putExtra(PARSE_NAME,listFilter.get(position).getdishNAME());
                 intent.putExtra(PARSE_PRICE,listFilter.get(position).getfoodPRICE());
                 intent.putExtra(PARSE_BOOL,ID);
-//                intent.putExtra(EMAIL_FOR_ORDER_FILTER,email_for_payment);
                 context.startActivity(intent);
             }
         });

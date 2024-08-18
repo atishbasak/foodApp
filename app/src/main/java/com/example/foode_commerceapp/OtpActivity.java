@@ -76,7 +76,6 @@ public class OtpActivity extends AppCompatActivity {
 
         try {
             String senderEmail = "sendingtest24@gmail.com";
-//            String receiverEmails = "atishbasak38@gmail.com";
             String receiverEmails = emailStr;
             String passwordSenderEmail = "lejohedxrdcxjmzb";
 
@@ -187,8 +186,6 @@ public class OtpActivity extends AppCompatActivity {
                     Intent intentEmail = getIntent();
                     String emailStr = intentEmail.getStringExtra(PaymentInterface.EMAIL_TO_OTP_PAGE);
                     Intent intent = new Intent(this, SuccessPage.class);
-//                    intent.putExtra(OTP_BOOL,true);
-//                    intent.putExtra(EMAIL_TO_SUCCESS,emailStr);
                     sendEmailEnd(emailStr);
                     startActivity(intent);
                     finish();
@@ -243,7 +240,6 @@ public class OtpActivity extends AppCompatActivity {
                             }
                         });
                     } catch (MessagingException e) {
-//                        Log.e("OtpPageLogin", "Failed to send email", e);
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {

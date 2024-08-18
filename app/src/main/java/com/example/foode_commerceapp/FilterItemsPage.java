@@ -47,13 +47,6 @@ public class FilterItemsPage extends AppCompatActivity {
 
     public static final String DISH_NAMETOSPE = "com.example.foode_commerceapp.extra.DISH_NAMETOSPE";
 
-
-    // for specific page items
-//    public static final String PARSE_NAME = "com.example.foode_commerceapp.extra.PARSE_NAME";
-//    public static final String PARSE_PRICE = "com.example.foode_commerceapp.extra.PARSE_PRICE";
-//    public static final String PARSE_IMG = "com.example.foode_commerceapp.extra.PARSE_IMG";
-
-
     private Context context;
     private RequestQueue requestQueue;
 
@@ -104,50 +97,35 @@ public class FilterItemsPage extends AppCompatActivity {
         String weeklyTop = "weeklyTop";
         String rating = "rating";
 
-//        Boolean topping_valid = true;
-
 
         if (itemFilter.equals(biriyani)) {
             jsonFilter = JSON_BIRIYANI;
-//            topping_valid = false;
         } else if (itemFilter.equals(pizza)) {
             jsonFilter = JSON_PIZZA;
         } else if (itemFilter.equals(chicken)) {
             jsonFilter = JSON_CHICKENDISH;
-//            topping_valid = false;
         } else if (itemFilter.equals(chiliChicken)) {
             jsonFilter = JSON_CHILICHICKEN;
-//            topping_valid = false;
         } else if (itemFilter.equals(eggRoll)) {
             jsonFilter = JSON_EGGROLL;
-//            topping_valid = true;
         } else if (itemFilter.equals(cake)) {
             jsonFilter = JSON_CAKE;
-//            topping_valid = false;
         } else if (itemFilter.equals(paneer)) {
             jsonFilter = JSON_PANEER;
-//            topping_valid = false;
         } else if (itemFilter.equals(burger)) {
             jsonFilter = JSON_BURGER;
-//            topping_valid = true;
         } else if (itemFilter.equals(sandwich)) {
             jsonFilter = JSON_SANDWICH;
-//            topping_valid = true;
         } else if (itemFilter.equals(chinese)) {
             jsonFilter = JSON_CHINESE;
-//            topping_valid = false;
         } else if (itemFilter.equals(manchurian)) {
             jsonFilter = JSON_MANCHURIAN;
-//            topping_valid = false;
         } else if (itemFilter.equals(coldDrinks)) {
             jsonFilter = JSON_COLDDRINKS;
-//            topping_valid = false;
         } else if (itemFilter.equals(weeklyTop)) {
             jsonFilter = WEEKLY_TOP;
-//            topping_valid = false;
         } else if (itemFilter.equals(rating)) {
             jsonFilter = RATING_ABOVE_FOUR;
-//            topping_valid = false;
         }
 
 
@@ -207,24 +185,9 @@ public class FilterItemsPage extends AppCompatActivity {
         FilterAdapter adapterFilter = new FilterAdapter(listFilter, context);
         filterRecycler.setAdapter(adapterFilter);
     }
-
-//    private void showToast(String msg) {
-//        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
-//    }
-
     public void toHomePage(View view) {
         Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
 
-//    public void openActivityItem(View view){
-//        dishNAME = findViewById(R.id.dishNAME);
-//        foodPRICE = findViewById(R.id.foodPRICE);
-//
-//        Intent intentId = getIntent();
-//        boolean ID = intentId.getBooleanExtra(HomeActivity.DISH_NAME,false);
-//        Toast.makeText(context, ""+ID, Toast.LENGTH_SHORT).show();
-////        Intent intent = new Intent(this,SpecificItemPage.class);
-////        startActivity(intent);
-//    }
 }

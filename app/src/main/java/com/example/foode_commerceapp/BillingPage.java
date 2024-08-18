@@ -142,8 +142,6 @@ public class BillingPage extends AppCompatActivity {
         String final_price_end = finalPriceEnd.getText().toString();
 
         boolean cod_true = true;
-//        boolean credit_true = true;
-//        boolean debit_true = true;
 
         if(radioCredit.isChecked()){
             Intent intent = new Intent(this,CodActivity.class);

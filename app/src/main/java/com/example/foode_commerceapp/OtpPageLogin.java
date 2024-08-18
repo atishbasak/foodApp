@@ -57,11 +57,7 @@ public class OtpPageLogin extends AppCompatActivity {
 
         textView78 = findViewById(R.id.textView78);
 
-//        emailSetText = findViewById(R.id.emailSetText);
-
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-//        String emailDemo = textView78.getText().toString();
 
         Intent intent = getIntent();
         String emailStr = intent.getStringExtra(LoginPage.EMAIL_VALUE);
@@ -90,16 +86,12 @@ public class OtpPageLogin extends AppCompatActivity {
         Random random = new Random();
         int OTP_NUMBER = random.nextInt(500000-400000) + 452364;
 
-//        Intent intentEmail = getIntent();
-//        String emailStr = intentEmail.getStringExtra(PaymentInterface.EMAIL_TO_OTP_PAGE);
-
         checkOTP = OTP_NUMBER;
         Intent intent = getIntent();
         String emailStr = intent.getStringExtra(LoginPage.EMAIL_VALUE);
 
         String senderEmail = "sendingtest24@gmail.com";
         String receiverEmail = emailStr;
-//        String receiverEmail = "atishbasakt24@gmail.com";
         String passwordSenderEmail = "lejohedxrdcxjmzb";
 
         String stringHost = "smtp.gmail.com";

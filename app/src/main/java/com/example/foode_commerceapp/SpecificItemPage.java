@@ -28,7 +28,6 @@ public class SpecificItemPage extends AppCompatActivity {
     public static  final String ORDER_QUANTITY = "com.example.foode_commerceapp.extra.ORDER_QUANTITY";
     public static final String RESTURANT_NAME = "com.example.foode_commerceapp.extra.RESTURANT_NAME";
     public static final String DISH_NAME = "com.example.foode_commerceapp.extra.DISH_NAME";
-//    public static final String IMG = "com.example.foode_commerceapp.extra.IMG";
     public static final String BILL_PRICE = "com.example.foode_commerceapp.extra.BILL_PRICE";
     public static final String SPE_BOOL = "com.example.foode_commerceapp.extra.SPE_BOOL";
     public static final String PARSE_IMG_TO_CART = "com.example.foode_commerceapp.extra.PARSE_IMG_TO_CART";
@@ -46,7 +45,6 @@ public class SpecificItemPage extends AppCompatActivity {
         itemIncrease = findViewById(R.id.itemIncrease);
         itemDecrease = findViewById(R.id.itemDecrease);
         itemNumberBox = findViewById(R.id.itemNumberBox);
-//        itemNumberBox.setText(decreaseInd[index]);
         itemPageOrderValue = findViewById(R.id.itemPageOrderValue);
         itemPageOrderValue= findViewById(R.id.itemPageOrderValue);
         spePriceSingle = findViewById(R.id.spePriceSingle);

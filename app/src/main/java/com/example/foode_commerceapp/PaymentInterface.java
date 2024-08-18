@@ -34,18 +34,13 @@ public class PaymentInterface extends AppCompatActivity {
         ccvValue = findViewById(R.id.ccvValue);
 
         Intent intent = getIntent();
-//        String crad_holder_name = intent.getStringExtra(BillingPage.CREDIT_PAYMENT);
         String payment_price = intent.getStringExtra(CodActivity.PRICE_TO_INTERFACE);
         String email_save_interface = intent.getStringExtra(CodActivity.EMAIL_TO_INTERFACE);
-//        cardNumber.setText(crad_holder_name);
-//        paymentValue.setText(payment_price);
     }
 
     public void goTOOtpPage(View view) {
         Intent intentCardName = getIntent();
         String email_save_interface = intentCardName.getStringExtra(CodActivity.EMAIL_TO_INTERFACE);
-//        String cardName = intentCardName.getStringExtra(CodActivity.CARD_NAME);
-//        cardNumber.setText(cardName);
 
         Intent intent = new Intent(this,OtpActivity.class);
         boolean paymentInterface = true;

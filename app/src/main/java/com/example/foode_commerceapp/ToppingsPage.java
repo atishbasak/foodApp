@@ -322,13 +322,11 @@ public class ToppingsPage extends AppCompatActivity {
     // for sending to the next activity
     public void openBillingActivity(View view) {
         Intent intentEmail = getIntent();
-//        String email_for_payment = intentEmail.getStringExtra(SpecificItemPage.EMAIL_FOR_ORDER_SPE);
         boolean top_bool = true;
         Intent intent = new Intent(this, BillingPage.class);
         String final_price_toppings = toppingsPageFinalPrice.getText().toString();
         intent.putExtra(FINAL_PRICE,final_price_toppings);
         intent.putExtra(TOP_BOOL,top_bool);
-//        intent.putExtra(EMAIL_FOR_ORDER_TOPPINGS,email_for_payment);
         startActivity(intent);
     }
 

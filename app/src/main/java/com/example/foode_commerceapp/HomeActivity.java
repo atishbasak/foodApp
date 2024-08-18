@@ -45,12 +45,10 @@ public class HomeActivity extends AppCompatActivity {
     private SliderView sliderView;
     String imgURL;
 
-    //////////////////////////////////
     String homeJsonFilter;
     CardView weeklyTopButton,ratingButton;
 
     Boolean filter = false;
-    /////////////////////////////////
 
 
     private Context context;
@@ -67,7 +65,6 @@ public class HomeActivity extends AppCompatActivity {
 
         resturantRecycler = findViewById(R.id.resturantRecycler);
         resturantRecycler.setLayoutManager(new LinearLayoutManager(this));
-//        restaurantRecycler.setLayoutManager(new LinearLayoutManager(this));
 
 
         sliderView=findViewById(R.id.imageSlider);
@@ -96,86 +93,6 @@ public class HomeActivity extends AppCompatActivity {
 
         weeklyTopButton = findViewById(R.id.weeklyTopButton);
         ratingButton = findViewById(R.id.ratingButton);
-
-//        homeJsonFilter = SUFFELED_FOOD;
-
-        ///////////////////////////////////
-//        weeklyTopButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-////                homeJsonFilter = WEEKLY_TOP;
-//                filter = true;
-//
-//                requestQueue = Volley.newRequestQueue(context);
-//                StringRequest stringRequest = new StringRequest(Request.Method.GET,
-//                        WEEKLY_TOP,
-//                        new Response.Listener<String>() {
-//                            @Override
-//                            public void onResponse(String response) {
-//                                try {
-//                                    JSONObject jsonObject = new JSONObject(response);
-//                                    JSONArray jsonArray = jsonObject.getJSONArray("record");
-//                                    fetchTheData(jsonArray);
-//                                } catch (JSONException e) {
-//                                    e.printStackTrace();
-//                                    showToast("Failed to parse JSON response");
-//                                }
-//                            }
-//                        }, new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//                        showToast("API call error");
-//                    }
-//                }
-//                ){
-//                    @Override
-//                    public Map<String , String> getHeaders() throws AuthFailureError {
-//                        return super.getHeaders();
-//                    }
-//                };
-//
-//                requestQueue.add(stringRequest);
-//            }
-//        });
-//
-//        ratingButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-////                homeJsonFilter = RATING_ABOVE_FOUR;
-//
-//                filter = true;
-//
-//                requestQueue = Volley.newRequestQueue(context);
-//                StringRequest stringRequest = new StringRequest(Request.Method.GET,
-//                        RATING_ABOVE_FOUR,
-//                        new Response.Listener<String>() {
-//                            @Override
-//                            public void onResponse(String response) {
-//                                try {
-//                                    JSONObject jsonObject = new JSONObject(response);
-//                                    JSONArray jsonArray = jsonObject.getJSONArray("record");
-//                                    fetchTheData(jsonArray);
-//                                } catch (JSONException e) {
-//                                    e.printStackTrace();
-//                                    showToast("Failed to parse JSON response");
-//                                }
-//                            }
-//                        }, new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//                        showToast("API call error");
-//                    }
-//                }
-//                ){
-//                    @Override
-//                    public Map<String , String> getHeaders() throws AuthFailureError {
-//                        return super.getHeaders();
-//                    }
-//                };
-//
-//                requestQueue.add(stringRequest);
-//            }
-//        });
 
         requestQueue = Volley.newRequestQueue(context);
         StringRequest stringRequest = new StringRequest(Request.Method.GET,
@@ -206,74 +123,6 @@ public class HomeActivity extends AppCompatActivity {
         };
 
         requestQueue.add(stringRequest);
-
-
-
-//        if(!filter){
-//            requestQueue = Volley.newRequestQueue(context);
-//            StringRequest stringRequest = new StringRequest(Request.Method.GET,
-//                    SUFFELED_FOOD,
-//                    new Response.Listener<String>() {
-//                        @Override
-//                        public void onResponse(String response) {
-//                            try {
-//                                JSONObject jsonObject = new JSONObject(response);
-//                                JSONArray jsonArray = jsonObject.getJSONArray("record");
-//                                fetchTheData(jsonArray);
-//                            } catch (JSONException e) {
-//                                e.printStackTrace();
-//                                showToast("Failed to parse JSON response");
-//                            }
-//                        }
-//                    }, new Response.ErrorListener() {
-//                @Override
-//                public void onErrorResponse(VolleyError error) {
-//                    showToast("API call error");
-//                }
-//            }
-//            ){
-//                @Override
-//                public Map<String , String> getHeaders() throws AuthFailureError {
-//                    return super.getHeaders();
-//                }
-//            };
-//
-//            requestQueue.add(stringRequest);
-//        }
-
-        ///////////////////////////////////
-
-
-
-//        requestQueue = Volley.newRequestQueue(context);
-//        StringRequest stringRequest = new StringRequest(Request.Method.GET,
-//                SUFFELED_FOOD,
-//                new Response.Listener<String>() {
-//                    @Override
-//                    public void onResponse(String response) {
-//                        try {
-//                            JSONObject jsonObject = new JSONObject(response);
-//                            JSONArray jsonArray = jsonObject.getJSONArray("record");
-//                            fetchTheData(jsonArray);
-//                        } catch (JSONException e) {
-//                            e.printStackTrace();
-//                            showToast("Failed to parse JSON response");
-//                        }
-//                    }
-//                }, new Response.ErrorListener() {
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//                showToast("API call error");
-//            }
-//        }
-//        ){
-//            @Override
-//            public Map<String , String> getHeaders() throws AuthFailureError {
-//                return super.getHeaders();
-//            }
-//        };
-//
-//        requestQueue.add(stringRequest);
     }
 
     private void fetchTheData(JSONArray jsonArray) {
@@ -429,11 +278,6 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ContactMePage.class);
         startActivity(intent);
     }
-
-//    public void toReviewPage(View view){
-//        Intent intent = new Intent(this, ReviewsPage.class);
-//        startActivity(intent);
-//    }
 
     public void toCartPage(View view){
         Intent intent = new Intent(this,CartActivity.class);

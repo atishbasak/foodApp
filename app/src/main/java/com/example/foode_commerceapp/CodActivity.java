@@ -137,12 +137,7 @@ public class CodActivity extends AppCompatActivity implements LocationListener {
             if (cod_true) {
                 Intent intent = new Intent(this, SuccessPage.class);
                 String codEmail = emailSpace.getText().toString();
-//                intent.putExtra(COD_BOOL,true);
-//                intent.putExtra(EMAIL_TO_SUCCESS_PAGE,codEmail);
-
-                ////////////////////////////////
                 sendEmailEnd(codEmail);
-                ////////////////////////////////
 
                 startActivity(intent);
             } else {
@@ -173,7 +168,6 @@ public class CodActivity extends AppCompatActivity implements LocationListener {
             List<Address> addresses = geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
             String address = addresses.get(0).getAddressLine(0);
 
-//            flatHouseSpace.setText(address);
             String[] addressSlice = address.split(",");
             flatHouseSpace.setText(addressSlice[0]);
             areaStreetSpace.setText(addressSlice[2]);
@@ -213,20 +207,11 @@ public class CodActivity extends AppCompatActivity implements LocationListener {
         enterState.setText(alpha);
     }
 
-
-
-
-
-
-
-
     public void sendEmailEnd(String email) {
         Intent intent = getIntent();
-//        String emailStr = "";
 
         String senderEmail = "sendingtest24@gmail.com";
         String receiverEmail = email;
-//        String receiverEmail = "atishbasakt24@gmail.com";
         String passwordSenderEmail = "lejohedxrdcxjmzb";
 
         String stringHost = "smtp.gmail.com";
@@ -261,7 +246,6 @@ public class CodActivity extends AppCompatActivity implements LocationListener {
                             }
                         });
                     } catch (MessagingException e) {
-//                        Log.e("OtpPageLogin", "Failed to send email", e);
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
