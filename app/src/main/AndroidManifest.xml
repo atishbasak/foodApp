@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FoodEcommerceApp"
+        tools:targetApi="31" >
+        <activity
+            android:name=".CodActivity"
+            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".CashOnDelivery"-->
+<!--            android:exported="false" />-->
+        <activity
+            android:name=".OtpPageLogin"
+            android:exported="false" />
+        <activity
+            android:name=".CartActivity"
+            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".CartPage"-->
+<!--            android:exported="false" />-->
+        <activity
+            android:name=".ReviewsPage"
+            android:exported="false" />
+        <activity
+            android:name=".ContactMePage"
+            android:exported="false" />
+        <activity
+            android:name=".AboutMePage"
+            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".AboutMe"-->
+<!--            android:exported="false" />-->
+        <activity
+            android:name=".FilterItemsPage"
+            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".DatabaseFoodApp"-->
+<!--            android:exported="false" />-->
+        <activity
+            android:name=".OtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentInterface"
+            android:exported="false" />
+        <activity
+            android:name=".LoginPage"
+            android:exported="false"
+            android:label="log page"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.FoodEcommerceApp" />
+        <activity
+            android:name=".SuccessPage"
+            android:exported="false"
+            android:label="success page"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.FoodEcommerceApp" />
+        <activity
+            android:name=".BillingPage"
+            android:exported="false"
+            android:label="billing page"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.FoodEcommerceApp" />
+        <activity
+            android:name=".ToppingsPage"
+            android:exported="false"
+            android:label="Toppings page"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.FoodEcommerceApp" />
+        <activity
+            android:name=".SpecificItemPage"
+            android:exported="false"
+            android:label="Item page"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.FoodEcommerceApp" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:label="Home page"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.FoodEcommerceApp" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

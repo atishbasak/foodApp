@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpecificItemPage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/specificPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="158dp"
+            android:layout_height="22dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.114"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.813" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="354dp"
+            android:layout_height="113dp"
+            android:text="@string/barger_description"
+            android:textColor="@color/button_text_color"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.631"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.674" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="133dp"
+            android:layout_height="28dp"
+            android:text="@string/barger_rating"
+            android:textColor="@color/button_text_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.129"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dishNameSPE"
+            app:layout_constraintVertical_bias="0.128" />
+
+        <TextView
+            android:id="@+id/dishNameSPE"
+            android:layout_width="338dp"
+            android:layout_height="55dp"
+            android:text="@string/barger_title"
+            android:textColor="@color/brown"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/specificIMG"
+            app:layout_constraintVertical_bias="0.458" />
+
+        <ImageView
+            android:id="@+id/specificIMG"
+            android:layout_width="401dp"
+            android:layout_height="280dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.115"
+            app:srcCompat="@drawable/bargermain" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:onClick="backToFilterPage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.076"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022"
+            app:srcCompat="@drawable/arrow" />
+
+        <Button
+            android:id="@+id/orderButttonSpecificItem"
+            android:layout_width="202dp"
+            android:layout_height="45dp"
+            android:backgroundTint="@color/button_order"
+            android:onClick="openTopingsActivitySPE"
+            android:text="@string/order"
+            android:textSize="20sp"
+            app:cornerRadius="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.899"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.931" />
+
+        <Button
+            android:id="@+id/itemPageOrderValue"
+            android:layout_width="110dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="150dp"
+            android:backgroundTint="@color/endColor"
+            android:text=""
+            android:textSize="20sp"
+            app:cornerRadius="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.096"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.975" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="65dp"
+            android:layout_height="23dp"
+            android:text="@string/spicy"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView12"
+            app:layout_constraintHorizontal_bias="0.196"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.783" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="45dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="108dp"
+            android:text="@string/mild"
+            android:textColor="@color/green"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView11"
+            app:layout_constraintHorizontal_bias="0.375"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="39dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="212dp"
+            android:layout_marginBottom="108dp"
+            android:text="@string/Hot"
+            android:textColor="@color/endColor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Quantity"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/brown"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.768"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.784" />
+
+        <TextView
+            android:id="@+id/itemNumberBox"
+            android:layout_width="24dp"
+            android:layout_height="30dp"
+            android:text="@string/Quantity_number"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView14"
+            app:layout_constraintEnd_toStartOf="@+id/cardView13"
+            app:layout_constraintHorizontal_bias="0.838"
+            app:layout_constraintStart_toEndOf="@+id/cardView14"
+            app:layout_constraintTop_toTopOf="@+id/cardView13"
+            app:layout_constraintVertical_bias="0.845" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView14"
+            android:layout_width="41dp"
+            android:layout_height="39dp"
+            android:backgroundTint="@color/endColor"
+            app:cardCornerRadius="9dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.727"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.843" >
+
+            <ImageView
+                android:id="@+id/itemDecrease"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                app:srcCompat="@drawable/minus_logo" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView13"
+            android:layout_width="41dp"
+            android:layout_height="39dp"
+            android:backgroundTint="@color/endColor"
+            app:cardCornerRadius="9dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.943"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.843" >
+
+            <TextView
+                android:id="@+id/itemIncrease"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:text="@string/plus"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/speInrSign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/inr_sign"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/itemPageOrderValue"
+            app:layout_constraintEnd_toEndOf="@+id/itemPageOrderValue"
+            app:layout_constraintHorizontal_bias="0.294"
+            app:layout_constraintStart_toStartOf="@+id/itemPageOrderValue"
+            app:layout_constraintTop_toTopOf="@+id/itemPageOrderValue" />
+
+        <Button
+            android:id="@+id/cartBtn"
+            android:layout_width="202dp"
+            android:layout_height="45dp"
+            android:backgroundTint="@color/button_order"
+            android:onClick="toCartActivity"
+            android:text="@string/add_to_cart"
+            android:textSize="20sp"
+            app:cornerRadius="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/orderButttonSpecificItem"
+            app:layout_constraintStart_toStartOf="@+id/orderButttonSpecificItem"
+            app:layout_constraintTop_toBottomOf="@+id/orderButttonSpecificItem" />
+
+        <TextView
+            android:id="@+id/spePriceSingle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/inr_value"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/speInrSign"
+            app:layout_constraintStart_toEndOf="@+id/speInrSign"
+            app:layout_constraintTop_toTopOf="@+id/speInrSign" />
+
+        <TextView
+            android:id="@+id/imgStr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Textview"
+            android:textColor="@color/transparent"
+            android:textSize="5sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="@+id/dishNameSPE"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/dishNameSPE"
+            app:layout_constraintVertical_bias="0.529" />
+
+        <TextView
+            android:id="@+id/restuaName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="5sp"
+            android:textColor="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="@+id/imgStr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgStr"
+            app:layout_constraintTop_toTopOf="@+id/imgStr" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
